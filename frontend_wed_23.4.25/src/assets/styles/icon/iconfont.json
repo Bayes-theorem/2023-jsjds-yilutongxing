@@ -1,0 +1,72 @@
+{
+  "id": "3882556",
+  "name": "jisai2023",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "18165720",
+      "name": "收件箱,收邮件,信封,信息,短信,查看邮件",
+      "font_class": "send-sms",
+      "unicode": "e8a1",
+      "unicode_decimal": 59553
+    },
+    {
+      "icon_id": "6970015",
+      "name": "公告",
+      "font_class": "gonggao",
+      "unicode": "e6f9",
+      "unicode_decimal": 59129
+    },
+    {
+      "icon_id": "13533473",
+      "name": "nlp-sa 情感分析",
+      "font_class": "nlp-saqingganfenxi",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "577313",
+      "name": "加号1",
+      "font_class": "jiahao1",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "1304875",
+      "name": "减",
+      "font_class": "jian",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "667792",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "17605481",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e816",
+      "unicode_decimal": 59414
+    },
+    {
+      "icon_id": "5387932",
+      "name": "箭头_页面_向右_o",
+      "font_class": "jiantou_yemian_xiangyou_o",
+      "unicode": "eb93",
+      "unicode_decimal": 60307
+    },
+    {
+      "icon_id": "5387935",
+      "name": "箭头_页面_向左_o",
+      "font_class": "jiantou_yemian_xiangzuo_o",
+      "unicode": "eb94",
+      "unicode_decimal": 60308
+    }
+  ]
+}
