@@ -1,0 +1,90 @@
+page{
+    background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+.notreadbox {
+    padding: 10rpx 30rpx;
+    background-color: #a2e6a7;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    flex-flow: row;
+}
+
+.readbox {
+    padding: 10rpx 30rpx;
+    background-color: white;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    flex-flow: row;
+}
+
+.text {
+    margin: 14rpx;
+    font-size: 30rpx;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.zhong {
+    margin: 20rpx 10rpx;
+}
+
+.xiayou {
+    z-index: 99999;
+    align-items: right;
+    text-align: right;
+    font-size: 26rpx;
+    margin: 0 10rpx 0 0;
+}
+
+.hongdian {
+    width: 32rpx;
+    height: 32rpx;
+    position: absolute;
+    right: 50rpx;
+    top: 33rpx;
+    z-index: 99999;
+}
+.box2{
+    margin: 0rpx 40rpx 40rpx 40rpx;
+    padding: 20rpx 20rpx 10rpx 25rpx;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: white;
+    border-bottom-color: rgb(153, 153, 153);
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    flex-flow: row; 
+  
+  }
+  .shangbu{
+    display: flex;
+    position: relative;
+  }
+  .zuo2{
+    text-align: left;
+    width:38rpx;
+    height:47rpx;
+    margin:0 0 0 5rpx
+  }
+  .zhong2{
+    text-align: center;
+    font-size: 32rpx;
+    margin:20rpx 0 0rpx 0;
+  }
+  .you2{
+    align-items: right;
+    font-size: 25rpx; 
+    position: absolute; 
+    right:10rpx;
+    top:10rpx;
+  }
+  .xiangqing{
+    align-items: right;
+    text-align: right;
+    margin:0 10rpx 0 0;
+    color: #26B99A;
+  }

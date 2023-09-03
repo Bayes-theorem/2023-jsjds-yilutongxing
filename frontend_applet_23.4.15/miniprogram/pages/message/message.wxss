@@ -1,0 +1,285 @@
+/* pages/allpages/allpages.wxss */
+.nva-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: white;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: 99999;
+}
+.nva-bar-border {
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+}
+
+.nva-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nva-bar-item cover-image {
+  width: 27px;
+  height: 27px;
+}
+
+.nva-bar-item cover-view {
+  font-size: 10px;
+}
+
+
+
+
+/**/
+.nav {  
+  margin-top: 20px;  
+  font-size: 34rpx;  
+  background: rgba(255,255,255,0.7);  
+  width: 100%;  
+}  
+.nav .item {  
+  display: flex;  
+  justify-content: space-between;  
+  border-bottom: 1px solid #e5e5e5;  
+  padding: 30rpx 0;  
+}  
+
+
+
+
+/**/
+.container{
+display: flex;
+background-color:  #F4F5F9;
+padding:22rpx;
+font-size: 16px;
+position: relative;
+border: 1rpx solid;
+border-bottom-color: rgb(197, 195, 195);
+border-top-color: white;
+border-left-color: white;
+border-right-color: white;
+flex-flow: row; 
+}
+
+page{
+display: flex;
+flex-direction: column;
+height: 100%;
+background-color: #F7F7F7;
+}
+.navbar{
+flex: none;
+display: flex;
+background: #fff;
+padding:8rpx;
+font-size: 31rpx;
+}
+.navbar .item{
+position: relative;
+flex: auto;
+text-align: center;
+line-height: 80rpx;
+}
+.navbar .item.active{
+color: #26B99A;
+}
+.navbar .item.active:after{
+content: "";
+display: block;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 4rpx;
+background: #26B99A;
+}
+
+
+/*TUI-conversation*/
+.container1{
+  width: 100vw;
+  background-color: #F4F5F9;
+  z-index:999
+}
+
+
+
+
+.conversation-list-area {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 190px);
+}
+
+.scoll-view {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-show-more {
+  display: flex;
+  width: 160rpx;
+  height: 160rpx;
+  padding-left: 3rpx;
+
+}
+
+.picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 96rpx;
+}
+.bottom-back{
+  height: 120px;
+  width: 100%;
+  background-color: #F4F5F9;
+  z-index: 3;
+}
+.bottom-area {
+  flex-direction: column;
+  position: absolute;
+  bottom: 80rpx;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.im-link {
+  width: 218rpx;
+  height: 36rpx;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  margin: 0 auto;
+  color: #26B99A;
+}
+.conversation-bubble {
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  position: absolute;
+  width: 280rpx;
+  background-color: #FFFFFF;
+ 
+  bottom: 220rpx;
+  left:233rpx;
+  z-index: 100;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  border-radius: 14rpx;
+}
+.conversation-bubble:before,.conversation-bubble:after{
+  content: "";
+  display: block;
+  border-width: 20px;
+  position: absolute;
+  bottom: -40px;
+  left: 95rpx;
+  border-style: solid dashed dashed;
+  border-color: #fff transparent transparent;
+  font-size: 0;
+  line-height: 0;
+  margin-left:4px
+}
+
+.conversation-bubble:after{
+  bottom: -33px;
+  border-color: #fff transparent transparent;
+
+}
+
+
+
+
+/*system message*/
+.user {
+  margin: 10rpx 5rpx;
+  height: 70rpx;
+  width: 100rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+}
+.nottextbox {
+  border: #0d0e0d;
+  border-width: 3rpx;
+  padding: 10rpx 30rpx 10rpx 30rpx;
+  background-color: #a2e6a7;
+  flex-flow: row;
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+.textbox {
+  padding: 5rpx 20rpx 10rpx 30rpx;
+  background-color: white;
+  flex-flow: row;
+  display: flex;
+  position: relative;
+  text-align: center;
+  border-bottom: 1rpx solid;
+  border-bottom-color: #e6e4e4;
+}
+.content {
+  text-align: center;
+  font-size: 30rpx;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  width: 80%;
+}
+
+.num {
+  font-size: 22rpx;
+  position: absolute;
+  right:20rpx;
+  display: flex;
+}
+.comment image {
+  transform: scale(.85);
+}
+.chakan{
+  font-size: 20rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.kf_button{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  height: 150rpx;
+  right: 0;
+  position: relative;
+  bottom: 10rpx;
+}
+.kf_image{
+  z-index: 9999;
+  position: fixed;
+  width: 110rpx;
+  height: 110rpx;
+  bottom: 50rpx;
+  right: 320rpx;
+}
+.hongdian{
+  width:30rpx;
+  height:30rpx;
+  position:absolute;
+  left:93.5rpx;
+  top:11rpx;
+  z-index: 99999;
+}

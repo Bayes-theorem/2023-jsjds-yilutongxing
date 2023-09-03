@@ -1,0 +1,23 @@
+<view class="shang">
+<view class="user_info"> 
+</view>
+      <image class="info_icon" bindtap="bindViewTap" src="{{userprofile}}" mode="cover"/> 
+</view>
+
+<view bindtap="adduserpost_record" data-pid="{{item._id}}" wx:for="{{postlist}}" wx:key="index" class="textbox">
+  <view>
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="widthFix" catchtap="otherpage" data-uid="{{item.user_id}}"></image>
+  </view>
+ <view class="content">
+  <view class="shangbu">
+    <view class="shangyou">{{item.date}}</view>
+   </view>
+   <text>\n</text>
+   <view class="zhong">{{item.title}}</view>
+   <text>\n</text>
+   <view class="you3">
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/评论 (1).png" class="pinglun" mode="heightFix"></image>
+    <view class="shu"></view>{{item.comment}}
+   </view>
+</view>
+</view>

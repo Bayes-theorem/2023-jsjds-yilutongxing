@@ -1,0 +1,129 @@
+page{
+  background-color:#F7F7F7;
+}
+.user_info {  
+  height: 70vw;
+  overflow: hidden;
+  /* background: -webkit-linear-gradient(top, #43d66c 0%,#bfe6cd 100%);  
+  background: linear-gradient(to bottom, #43d66c 0%,#bfe6cd 100%); */
+  /* background-color: #66cc93; */
+  background-color:#81d7c5;
+  width:100%
+}  
+.user_info .user_info_wrap {  
+  position: relative;  
+  width:100%
+}  
+.user_info .user_info_wrap .user_bgc {  
+  height: 70vw;  
+  background: -webkit-linear-gradient(top, #43d66c 0%,#bfe6cd 100%);  
+  background: linear-gradient(to bottom, #43d66c 0%,#bfe6cd 100%);
+  width:100%
+}  
+
+.user_login.button{
+  height: 150rpx;  
+  width: 130rpx;  
+  display: block;  
+  z-index: 99999;
+}
+.user_info .user_info_wrap .info {  
+  position: absolute;  
+  left: 50%;  
+  transform: translateX(-50%);  
+  top: 80rpx;  
+}  
+.user_info .user_info_wrap .info .info_icon {  
+  height: 170rpx;  
+  width: 170rpx;  
+  display: block;  
+  margin: auto;  
+  border-radius: 50%;  
+}  
+.user_info .user_info_wrap .info .info_name {  
+  text-align: center;  
+  margin-top: 28rpx;  
+  color: #fff;  
+  font-size: 40rpx;  
+  font-weight: bold;  
+}  
+ 
+.user_info .user_info_wrap .info .info_logout {  
+  position: relative;  
+  left: 50%;  
+  transform: translateX(-50%);  
+  text-align: center;  
+ 
+}  
+ 
+ 
+ 
+.user_content {
+  position: relative;
+  border-radius: 20rpx;
+}
+.user_content .user_main {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -80rpx;
+  width: 94%;
+  border-radius: 20rpx;
+  background-color: white;
+}
+.user_content .user_main .main_his_wrap {
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  font-size: 36rpx;
+}
+.user_content .user_main .main_his_wrap navigator {
+  flex: 1;
+}
+
+ 
+.header {  
+  border-radius: 20rpx;
+  padding: 25rpx 30rpx;  
+} 
+ 
+.iimg{  
+  width: 45rpx;  
+  height: 45rpx;  
+  margin-right: 10rpx;  
+  top: 10rpx; 
+  border-radius: 20rpx;
+  position: relative;  
+}  
+ 
+.nav {  
+  margin-top: 20px;  
+  font-size: 34rpx;  
+  background: rgba(255,255,255,0.7);  
+  width: 100%;  
+  border-radius: 20rpx;
+}  
+ 
+.nav .item {  
+  display: flex;  
+  justify-content: space-between;  
+  border-bottom: 1px solid #e5e5e5;  
+  padding: 25rpx 30rpx 25rpx 30rpx;  
+}  
+.button{
+  z-index: 99999;
+  align-items: center;
+}
+.xiangqing{
+  align-items: right;
+  text-align: right;
+  position:absolute;
+  display: flex;
+  right:40rpx;
+  width:45rpx;
+  height:40rpx;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,7 @@
+<view class="newfriends" bindtap="jumptonewfriends"> 
+        <text>新的朋友</text> 
+        <image class="xiangqing" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/详情1‘.png" mode="scaleToFill"></image>
+    </view> 
+ 
+ <alphabet-order-list id='alphabet_order_list' source='{{friends}}'  wx:for="{{friends}}"wx:key="userId"  data-uid='{{item.userId}}' bindtap="otherpage"  group-key='remark' text-key='remark'/>
+

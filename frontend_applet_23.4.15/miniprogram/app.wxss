@@ -1,0 +1,21 @@
+/* 通配 */
+@import'style/weui.wxss';
+page,view,text,swiper,swiper-item,image,navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page{
+  /* 定义主题颜色(上面导航栏的颜色） */
+  --themeColor:#26B99A;
+  /* 定义字体大小（14号） */
+  font-size: 28rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}

@@ -1,0 +1,49 @@
+<!--pages/search/search.wxml-->
+<view class='page_row'>
+  	<view class="search">
+  		<view class="df search_arr">
+  			<icon class="searchcion" size='20' type='search'></icon>
+  			<input class="" bindinput="input_p" placeholder="请输入关键字" value="{{searchValue}}" />
+  		</view>
+  	</view>
+  	<button class='sousuo' size="mini" catchtap="see" style="color: white;">搜索</button>
+  </view>
+ <!--
+  <block wx:if='{{obj}}' wx:for='{{obj}}' wx:key='index'>
+<view class="textbox">
+  	<view class="boxtitle">{{item.title}}</view>
+  	<view class="boxdetail">{{item.detail}}</view>
+</view>
+  </block>
+-->
+<view bindtap="adduserpost_record" data-pid="{{item._id}}" wx:for="{{obj}}" wx:key="index" class="textbox">
+  <view>
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="widthFix" catchtap="otherpage" data-uid="{{item.user_id}}"></image>
+  </view>
+ <view class="content">
+  <view class="shangbu">
+    <view class="shangyou">{{item.date}}</view>
+   </view>
+   <text>\n</text>
+   <view class="zhong">{{item.detail}}</view>
+   <view class="you3">
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/评论.png" class="pinglun" mode="heightFix"></image>
+    <view class="shu">{{item.comment}}</view>
+   </view>
+ </view>
+</view>
+<!-- <view bindtap="adduserpost_record" data-pid="{{item._id}}" wx:for="{{list}}" wx:key="index" class="textbox">
+  <view>
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="widthFix" catchtap="otherpage" data-uid="{{item.user_id}}"></image>
+  </view>
+ <view class="content">
+  <view class="shangbu">
+    <view class="shangyou">{{item.date}}</view>
+   </view>
+   <text>\n</text>
+   <view class="zhong">{{item.title}}</view>
+   <view class="you3">
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/评论 (1).png" class="pinglun" mode="heightFix"></image>
+    <view class="shu">{{item.comment}}</view>
+   </view>
+ </view> -->

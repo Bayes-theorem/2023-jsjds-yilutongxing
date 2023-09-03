@@ -1,0 +1,58 @@
+.textbox {
+  margin: 60rpx 40rpx 60rpx 40rpx;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: white;
+  /* box-shadow:0px 2px 4px 2px #DDDDDD; */
+  border-bottom-color: rgb(153, 153, 153);
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+  position: relative;
+  display: flex;
+}
+page{
+  background-color: #F7F7F7;
+}
+.user{
+  margin: 40rpx 20rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow:hidden;
+  width:100rpx
+}
+.content{
+  width: 500rpx;
+  height: 100rpx;
+}
+.zhong{
+  text-align: center;
+  font-size: 33rpx;
+  justify-content:center
+}
+.you{
+  align-items: right;
+  font-size: 26rpx; 
+  position: absolute; 
+  right:10px;
+}
+.you2{
+  align-items: right;
+  font-size: 24rpx; 
+  position: absolute; 
+  right:10px;
+}
+.imagesize02{
+  display:flex;
+  height: 100%;
+}
+
+.imagesize02 image{
+  width: 42rpx;
+  margin: 5rpx;
+  justify-content:center
+}
+.num2{
+  padding:10rpx 0 10rpx 0;
+  font-size: 24rpx;
+}

@@ -1,0 +1,466 @@
+page{
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.navbar{
+  z-index: 99999;
+  flex: none;
+  display: flex;
+  background: #fff;
+  padding:3rpx;
+  position:fixed;
+  bottom:0;
+  font-size: 31rpx;
+  background-color: white;
+  justify-content: space-around;
+  width:750rpx;
+  border-top-color: rgb(156, 156, 156);
+  border-bottom: white;
+  border-left-color: white;
+  border-right-color: white;
+}
+.navbar-border {
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+  transform: scaleY(0.5);
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+  padding:10rpx 0rpx 10rpx 0rpx;
+}
+.navbar .item.active{
+  color: #26B99A;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #26B99A;
+}
+/* 交流区 */
+.user_info2 {  
+  height: 28vw;
+  overflow: hidden;
+  background-color: #81d7c5;
+}  
+.yuqingzhuanqu{
+  color:white;
+  font-size:42rpx;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top:59rpx;
+  }
+.zuoshang{
+  height:60rpx;
+  position:absolute;
+  top:35rpx;
+  left:220rpx;
+  z-index: 999999;
+}
+.youxia{
+  height:60rpx;
+  position:absolute;
+  top:98rpx;
+  right:220rpx;
+  z-index: 999999;
+}
+.box {
+  margin: 2rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: white;
+}
+
+.sousuo {
+  margin-top: 15rpx;
+  margin-right: 40rpx;
+  width: 135rpx;
+  height: 75rpx;
+  line-height: 40%;
+  text-align:center; 
+  border-radius: 10rpx;
+}
+
+.box-container {
+  margin-left: 20rpx;
+  width: 70%;
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+ 
+}
+
+.left {
+  margin-left: 40rpx;
+  font-size: 26rpx;
+}
+
+._left {
+  margin-left: 40rpx;
+  font-size: 26rpx;
+  color: #26B99A;
+}
+
+.kf_button{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  height: 150rpx;
+  right: 0;
+  position: relative;
+  bottom: 10rpx;
+}
+.kf_image{
+  z-index: 9999;
+  position: fixed;
+  width: 110rpx;
+  height: 110rpx;
+  bottom: 150rpx;
+  right: 320rpx;
+}
+
+.textbox {
+  margin: 40rpx 40rpx 40rpx 40rpx;
+  border: 2rpx solid;
+  border-radius: 10px;
+  background-color: white;
+  border-bottom-color: rgb(153, 153, 153);
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+  display: flex;
+  flex-flow: row; 
+}
+
+.user{
+  margin: 40rpx 20rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow:hidden;
+  width:100rpx
+}
+.content{
+  width: 500rpx;
+  height: 100rpx;
+}
+.zhong{
+  display: -webkit-box;
+  text-align: center;
+  font-size: 30rpx;
+  justify-content:center;
+  margin-top: 13rpx;
+  line-height:40rpx;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.you{
+  align-items: right;
+  font-size: 24rpx; 
+  position: absolute; 
+  right:6rpx;
+  top:10rpx
+}
+.shangyou{
+  align-items: right;
+  font-size: 22rpx; 
+  position: absolute; 
+  right:0rpx;
+  top:10rpx
+}
+.you3{
+  align-items: right;
+  position:absolute;
+  right:60rpx;
+  margin:15rpx 5rpx 30rpx 7rpx;
+  display: flex;
+  flex-flow: row; 
+}
+.weui-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Half Screen Dialog Styles*/
+  .weui-half-screen-dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 65%;
+    max-height: 75%;
+    z-index: 5000;
+    line-height: 1.4;
+    background-color: #ffffff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+    /* padding: 0 calc(24px + constant(safe-area-inset-right))
+      constant(safe-area-inset-bottom) calc(24px + constant(safe-area-inset-left));
+    padding: 0 calc(24px + env(safe-area-inset-right)) env(safe-area-inset-bottom)
+      calc(24px + env(safe-area-inset-left)); */
+      padding:0 40rpx 0rpx 40rpx;
+  }
+  .weui-half-screen-dialog__hd {
+    font-size: 8px;
+    height: 6em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .weui-half-screen-dialog__hd .weui-icon-btn {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .weui-half-screen-dialog__hd__side {
+    position: relative;
+  }
+  .weui-half-screen-dialog__hd__main {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+  }
+  .weui-half-screen-dialog__hd__side + .weui-half-screen-dialog__hd__main {
+    text-align: center;
+    padding: 0 20px;
+  }
+  .weui-half-screen-dialog__hd__main
+    + .weui-half-screen-dialog__hd__side
+    .weui-icon-btn {
+    right: 0;
+  }
+  .weui-half-screen-dialog__title {
+    display: block;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .weui-half-screen-dialog__title_center {
+    display: block;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+  }
+  .weui-half-screen-dialog__subtitle {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 10px;
+  }
+  .weui-half-screen-dialog__bd {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-y: auto;
+  }
+  .weui-half-screen-dialog__desc {
+    padding-top: 4px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 1.4;
+  }
+  .weui-half-screen-dialog__tips {
+    padding-top: 16px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
+  }
+  .weui-half-screen-dialog__ft {
+    padding: 40px 24px 32px;
+    text-align: center;
+  }
+  .weui-half-screen-dialog__ft .weui-btn {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+    width: 120px;
+  }
+/* 投诉区 */
+.complainbox{
+  margin: 80rpx 150rpx;  
+}
+.complainbox2{
+  margin: 95rpx 150rpx;  
+}
+.button-sp-area01{
+  margin: 10rpx;
+  display:flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.imagesize01{
+  display:flex;
+  height: 100%;
+  justify-content: center;
+}
+.imagesize01 image{
+  width: 110rpx;
+  margin: 5rpx;
+}
+.button-sp-area02{
+  margin: 10rpx;
+  display:flex;
+  height: 100%;
+  justify-content: center;
+}
+.imagesize02{
+  display:flex;
+  height: 100%;
+  justify-content: center;
+}
+.imagesize02 image{
+  width: 100rpx;
+  margin: 5rpx;
+}
+.textposition{
+  position: fixed;
+  text-align: center;
+  bottom: 140rpx;
+  left: 0;
+  right: 0;
+  font-size: 30rpx;
+}
+.colorsel{
+  color: rgb(69, 201, 124);
+  font-size: 32rpx;
+}
+/* 公示区 */
+.shangbu{
+  display: flex;
+  position: relative;
+}
+.box2{
+  margin: 0rpx 40rpx 40rpx 40rpx;
+  padding: 20rpx;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: white;
+  border-bottom-color: rgb(153, 153, 153);
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+  flex-flow: row; 
+
+}
+.zuo2{
+  text-align: left;
+  width:40rpx;
+  height:50rpx;
+}
+.zhong2{
+  text-align: center;
+  font-size: 33rpx;
+  margin:15rpx 0 5rpx 0;
+}
+.you2{
+  align-items: right;
+  font-size: 25rpx; 
+  position: absolute; 
+  right:10rpx;
+  top:10rpx;
+}
+.yiwen{
+  text-align: center;
+}
+.fankui{
+  color:#03a747
+}
+.xiangqing{
+  align-items: right;
+  text-align: right;
+  margin:0 10rpx 0 0;
+  color: #26B99A;
+}
+.pinglun{
+  width:36rpx;
+  height:36rpx;
+}
+.shu{
+  text-align: center;
+  margin:0 5rpx 15rpx 7rpx;
+  font-size: 24rpx;
+}
+
+.btn_complain{
+    background-color: #26B99A;
+    background: #26B99A;
+    border-color: #26B99A;
+}
+
+.button-sp-area01 {
+    margin: 10rpx;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.imagesize01 {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.imagesize01 image {
+    width: 110rpx;
+    margin: 5rpx;
+}
+
+.button-sp-area02 {
+    margin: 10rpx;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.imagesize02 {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.imagesize02 image {
+    width: 100rpx;
+    margin: 5rpx;
+}
+
+.textposition {
+    position: fixed;
+    text-align: center;
+    bottom: 140rpx;
+    left: 0;
+    right: 0;
+    font-size: 30rpx;
+}
+
+.colorsel {
+    color: rgb(69, 201, 124);
+    font-size: 32rpx;
+}

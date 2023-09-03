@@ -1,0 +1,66 @@
+{
+    "cloud": true,
+    "pages": [
+        "pages/choselogin/choselogin",
+        "pages/complain/complain",
+        "pages/complainlist/complainlist",
+        "pages/complainjindu/complainjindu",
+
+        "pages/allarea/allarea",
+        
+        
+        "pages/hospital/hospital",
+        "pages/onepost/onepost",
+        "pages/otherpage/otherpage",
+        "pages/complainbox/complainbox",
+        "pages/useroneannouncement/useroneannouncement",
+        "pages/my/my",
+        "pages/stored/stored",
+        "pages/message/message",
+        "pages/sendsuccess/sendsucces",
+        "pages/search/search",
+        "pages/addpost/addpost",
+        "pages/TUI-Conversation/create-conversation/create",
+        "pages/TUI-Conversation/conversation/conversation",
+        "pages/TUI-Chat/chat",
+        "pages/myFriends2/myFriends2",
+        "pages/wordpost/wordpost",
+        "pages/zhinan/zhinan",
+        "pages/zhengce/zhengce",
+        "pages/newFriendsApplication/newFriendsApplication"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#81d7c5",
+        "navigationBarTitleText": "医口同声",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#26B99A",
+        "list": [{
+                "pagePath": "pages/hospital/hospital",
+                "text": "医院",
+                "iconPath": "icon/医院1.png",
+                "selectedIconPath": "icon/医院2.png"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "text": "消息",
+                "iconPath": "icon/message01.png",
+                "selectedIconPath": "icon/消息3.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "icon/my02.png",
+                "selectedIconPath": "icon/我的2.png"
+            }
+        ]
+    },
+
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "lazyCodeLoading": "requiredComponents"
+}

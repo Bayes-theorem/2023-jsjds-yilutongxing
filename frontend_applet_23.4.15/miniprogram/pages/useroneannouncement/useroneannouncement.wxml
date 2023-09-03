@@ -1,0 +1,41 @@
+<!-- <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/公告6.png" class="canvas"></image> -->
+
+<view class="coandsi">
+    <image style="z-index:9999;width:60rpx;height:60rpx;justify-content: center;align-items:center;display:flex;margin-left:282rpx;margin-bottom: 25rpx;" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/信息公示.png" mode="heightFix"></image> 
+  <view class="title">处理问题描述：</view>
+  <view wx:for="{{list}}" class="zhengwen">{{item.problem}}</view>
+  <view class="title">处理方式：</view>
+  <view wx:for="{{list}}" class="zhengwen">{{item.measures}}</view>
+  <view wx:for="{{list}}" class="luokuan">{{item.date}}</view>
+  <view class="luokuan">{{thishosname}}</view>
+  <view wx:for="{{list}}" wx:key="index" class="box">
+  <view class="tool" wx:for="{{status}}" wx:key="index" wx:for-item="status">
+        <view class="tool-item" catchtap='onUpTap'>
+            <image wx:if="{{status.agree}}" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost02.png"></image>
+            <image wx:else src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost01.png"></image>
+            <text style="margin-right: 25rpx;font-size:26rpx">{{item.agree}}</text>
+        </view>
+        <view class="tool-item" catchtap='onDownTap' >
+            <image wx:if="{{status.disagree}}"src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost07.png"></image>
+            <image wx:else bindtap="reason" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost06.png"></image>
+            <text style="font-size:26rpx">{{item.disagree}}</text>
+        </view>
+  </view>
+</view>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">请问您对处理结果有什么问题？</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputreason" class="input" placeholder="请输入原因"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+  </view>
+</view>
+
+

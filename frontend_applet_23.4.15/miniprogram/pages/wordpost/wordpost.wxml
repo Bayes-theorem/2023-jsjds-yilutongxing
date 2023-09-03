@@ -1,0 +1,21 @@
+
+  <view bindtap="adduserpost_record" data-pid="{{item._id}}" wx:for="{{list}}" wx:key="index" class="textbox">
+  <view>
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="widthFix" catchtap="otherpage" data-uid="{{item.user_id}}"></image>
+  </view>
+ <view class="content">
+  <view class="you">
+  <view class='imagesize02'>
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/monitor03.png" mode="widthFix" class="in-image"></image>
+    <view class="num2">{{item.agree+5*item.comment+10*item.collect}}</view>
+  </view>
+  </view>
+   <text>\n</text>
+   <view class="zhong">{{item.title}}</view>
+   <text>\n</text>
+   <view class="you2">
+    <view>{{item.date}}</view>
+   </view>
+ </view>
+</view>
+

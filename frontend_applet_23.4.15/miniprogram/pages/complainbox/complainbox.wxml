@@ -1,0 +1,41 @@
+<!--pages/complainbox/complainbox.wxml-->
+<view class="complainbox">
+  <view class="tishi">请问您在我院遇到什么问题？</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_active">
+        <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="请详细描述" style="height: 2.2em;;font-size:32rpx" bindinput="sendtoproblem"/>
+            <view aria-role="option" title="字数统计" class="weui-textarea-counter">0/200</view>
+            </view>
+        </view>
+    </view>
+  <view class="tishi">您希望的处理方式是：</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_active">
+        <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder-class="weui-input__placeholder" placeholder="请输入" style="height: 1.8em;font-size:32rpx" bindinput="sendtohope"/>
+            <view aria-role="option" title="字数统计" class="weui-textarea-counter">0/150</view>
+            </view>
+        </view>
+    </view>
+<view class="tishi">请留下您的姓名和联系方式：</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_active">
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder-class="weui-input__placeholder" style="height: 0.5em;font-size:32rpx" placeholder="姓名" bindinput="sendtoname"/>
+        </view>
+    </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_active">
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder-class="weui-input__placeholder" style="height: 0.5em;font-size:32rpx" placeholder="联系电话" bindinput="sendtophonenumber"/>
+        </view>
+    </view>
+</view>
+</view>
+<view class="button-sp-area">
+    <button type="primary" plain="true" size="mini" bindtap="jumptosendsuccess">
+    投递
+    </button>
+  </view>

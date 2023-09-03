@@ -1,0 +1,80 @@
+.shang{
+  width:750rpx;
+  height:300rpx;
+}
+page{
+  background-color: #F7F7F7;
+}
+.user_info {  
+  height: 190rpx;
+  overflow: hidden;
+  background-color: #81d7c5;
+}  
+
+.info_icon {  
+  z-index: 99999;
+  height: 140rpx;  
+  width: 140rpx;  
+  display: flex;
+  position :absolute;
+  left:20rpx;
+  top:120rpx;
+  border-radius: 50%;  
+}  
+.textbox {
+  margin: 40rpx 40rpx 40rpx 40rpx;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: white;
+  /* box-shadow:0px 2px 2px 1px #DDDDDD; */
+  border-bottom-color: rgb(153, 153, 153);
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+  display: flex;
+  flex-flow: row; 
+}
+.user{
+  margin: 40rpx 20rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow:hidden;
+  width:100rpx
+}
+.content{
+  width: 500rpx;
+  height: 100rpx;
+}
+.zhong{
+  text-align: center;
+  font-size: 35rpx;
+  justify-content:center
+}
+.shangbu{
+  display: flex;
+  position: relative;
+}
+.shangyou{
+  align-items: right;
+  font-size: 24rpx; 
+  position: absolute; 
+  right:0rpx;
+  top:10rpx
+}
+.you3{
+  align-items: right;
+  position:absolute;
+  right:60rpx;
+  margin:0 5rpx 20rpx 7rpx;
+  display: flex;
+  flex-flow: row; 
+}
+.shu{
+  text-align: center;
+  margin:0 5rpx 15rpx 7rpx;
+  font-size: 26rpx;
+}
+.pinglun{
+  width:40rpx;
+  height:40rpx;
+}

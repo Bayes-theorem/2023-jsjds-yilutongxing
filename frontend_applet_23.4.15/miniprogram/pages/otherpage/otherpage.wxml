@@ -1,0 +1,75 @@
+<view class="shang">
+<view class="user_info"> 
+</view>
+      <image class="info_icon" bindtap="bindViewTap" src="{{other_profile}}" mode="cover"/> 
+    
+      <view hidden="{{isFriend}}">
+        <button size="mini"  bindtap="jumptoaddfriend" type="primary" class="haoyou"> +好友 </button>
+      </view>  
+<view wx:if="{{user_id!=this_user_id}}">
+<button size="mini"  bindtap="jumptoconversation" type="primary" class="haoyou">   私信  </button>
+</view>
+
+</view>
+<view class="tishi">发过的贴子</view>
+<view bindtap="adduserpost_record" data-pid="{{item._id}}" wx:for="{{otherpost}}" wx:key="index" class="textbox">
+  <view>
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="widthFix" catchtap="otherpage" data-uid="{{item.user_id}}"></image>
+  </view>
+ <view class="content">
+  <view class="shangbu">
+    <view class="shangyou">{{item.date}}</view>
+   </view>
+   <text>\n</text>
+   <view class="zhong">{{item.detail}}</view>
+   <view class="you3">
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/评论.png" class="pinglun" mode="heightFix"></image>
+    <view class="shu">{{item.comment}}</view>
+   </view>
+ </view>
+ 
+</view>
+<view class="tishi">评论过的贴子</view>
+<view bindtap="adduserpost_record" data-pid="{{item._id}}" wx:for="{{commentpost}}" wx:key="index" class="textbox">
+  <view>
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="widthFix" catchtap="otherpage" data-uid="{{item.user_id}}"></image>
+  </view>
+ <view class="content">
+  <view class="shangbu">
+    <view class="shangyou">{{item.date}}</view>
+   </view>
+   <text>\n</text>
+   <view class="zhong">{{item.detail}}</view>
+   <view class="you3">
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/评论.png" class="pinglun" mode="heightFix"></image>
+    <view class="shu">{{item.comment}}</view>
+   </view>
+ </view>
+ 
+</view>
+
+
+
+<!--弹窗-->
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-content">
+    <view>发送好友申请</view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" bindinput="ainput" class="input1" placeholder="我是{{myID}}"></input>
+    </view>
+    <view>备注</view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" bindinput="binput" class="input" placeholder="{{user_nickname}}"></input>
+    </view>
+    <view>分组</view>
+    <view class="modal-input">
+      <input placeholder-class="input-holder" type="text" bindinput="cinput" class="input" placeholder="friend"></input>
+    </view>
+
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="addFriends" >发送</view>
+  </view>
+</view>
+

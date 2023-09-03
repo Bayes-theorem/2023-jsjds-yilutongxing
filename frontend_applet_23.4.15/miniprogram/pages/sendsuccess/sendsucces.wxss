@@ -1,0 +1,26 @@
+page{
+  background-color: #F7F7F7;
+}
+.box01{
+  font-size: 34rpx;
+  text-align: center;
+  margin-top: 220rpx;
+}
+.box02{
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 60rpx;
+}
+.button-sp-area{
+  margin: 10rpx;
+  display:flex;
+  height: 100%;
+  justify-content: center;
+  margin-top: 300rpx;
+}
+.setting{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

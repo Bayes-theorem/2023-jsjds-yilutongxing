@@ -1,0 +1,24 @@
+<!-- <view wx:for="{{list}}" wx:key="index" class="readbox" 
+bindtap="tocomplaindetail"
+data-com_id="{{item._id}}">
+    <view class="zhong">
+    反馈问题：{{item.problem}}
+    </view>
+    <view class="xiayou">
+    {{item.date}}
+    </view>
+</view> -->
+<view style="margin-top:40rpx;">
+    <view
+wx:for="{{list}}"
+wx:key="index"
+class="box2"
+bindtap="tocomplaindetail" data-pid="{{item._id}}" data-com_id="{{item._id}}">
+  <view class="shangbu">
+  <image class="zuo2" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/收件箱.png" mode="heightFix"></image> 
+  <view class="you2">{{item.date}}</view> 
+  </view>
+  <view class="zhong2">反馈问题：{{item.problem}}</view>
+  <view class="xiangqing">>></view>
+</view>
+</view>

@@ -1,0 +1,118 @@
+<view wx:for="{{list}}" wx:key="index" class="coandsi">
+    <view class="title">问题描述：</view>
+    <view>{{item.problem}}</view>
+    <view class="title2">希望处理方式：</view>
+    <view>{{item.hope}}</view>
+</view>
+
+<view class="contantBox" wx:key="index" wx:for="{{list}}">
+<view class="jindu">
+    处理进度
+</view>
+    <view>
+        <view class="itemBox">
+            <!-- 左边线条 -->
+            <view class="itemLeftBox">
+                <view class="lineBox">
+                    <view class="topLineBox"></view>
+                    <view wx:if="{{item.jindu>=1}}" class="bomLineBox activelongLineBox"></view>
+                    <view wx:else class="bomLineBox longLineBox"></view>
+                </view>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾.png" wx:if="{{item.jindu >= 1}}"></image>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾1.png" wx:else></image>
+            </view>
+            <!-- 右边内容 -->
+            <view class="rightBigBox {{item.jindu >= 1 ? 'TxtBox' : 'unTxtBox'}}">
+                <view>已查看</view>
+                <view class="timeBox">{{item.time1}}</view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="itemBox">
+            <!-- 左边线条 -->
+            <view class="itemLeftBox">
+                <view class="lineBox">
+                    <view wx:if="{{item.jindu>=2}}" class="topLineBox activelongLineBox"></view>
+                    <view wx:else class="topLineBox longLineBox"></view>
+                    <view wx:if="{{item.jindu>=2}}" class="bomLineBox activelongLineBox"></view>
+                    <view wx:else class="bomLineBox longLineBox"></view>
+                </view>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾.png" wx:if="{{item.jindu >= 2}}"></image>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾1.png" wx:else=""></image>
+            </view>
+            <!-- 右边内容 -->
+            <view class="rightBigBox {{item.jindu >= 2 ? 'TxtBox' : 'unTxtBox'}} ">
+                <view>院方已联系</view>
+                <view class="timeBox">{{item.time2}}</view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="itemBox">
+            <!-- 左边线条 -->
+            <view class="itemLeftBox">
+                <view class="lineBox">
+                    <view wx:if="{{item.jindu>=3}}" class="topLineBox activelongLineBox"></view>
+                    <view wx:else class="topLineBox longLineBox"></view>
+                    <view wx:if="{{item.jindu>=3}}" class="bomLineBox activelongLineBox"></view>
+                    <view wx:else class="bomLineBox longLineBox"></view>
+                </view>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾.png" wx:if="{{item.jindu >= 3}}"></image>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾1.png" wx:else=""></image>
+            </view>
+            <!-- 右边内容 -->
+            <view class="rightBigBox {{item.jindu >= 3 ? 'TxtBox' : 'unTxtBox'}} ">
+                <view>已移交相关部门</view>
+                <view class="timeBox">{{item.time3}}</view>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="itemBox">
+            <!-- 左边线条 -->
+            <view class="itemLeftBox">
+                <view class="lineBox">
+                    <view wx:if="{{item.jindu>=4}}" class="topLineBox activelongLineBox"></view>
+                    <view wx:else class="topLineBox longLineBox"></view>
+                </view>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾.png" wx:if="{{item.jindu >= 4}}"></image>
+                <image class="newestIconBox" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/勾1.png" wx:else=""></image>
+            </view>
+            <!-- 右边内容 -->
+            <view class="rightBigBox {{item.jindu >= 4 ? 'TxtBox' : 'unTxtBox'}} ">
+                <view>处理完成</view>
+                <view class="timeBox">{{item.time4}}</view>
+            </view>
+        </view>
+    </view>
+    <button size="mini" type="primary" class="btn-pingjia" wx:if="{{item.jindu >= 4&&item.pingjiaDetail.length==0}}" bindtap="tanchuang">待评价</button>
+    <view class="pingjia" wx:if="{{item.jindu >= 4&&item.pingjiaDetail.length!=0}}">
+        <view class="lineX"></view>
+        <view class="pingjiatitle">我的评价：</view>
+        <image class="pingjiaIcon" wx:for="{{starsBox}}" 
+        wx:for-item="level" wx:key="index" src="{{item.pingjiaLevel>=level? '../../icon/星级(1).png' : '../../icon/星级.png'}}"></image>
+        <view class="pingjiaDetail">{{item.pingjiaDetail}}</view>
+    </view>
+</view>
+
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">请您对处理过程进行评价</view>
+    <view class="modal-content">
+        <view class="container">
+            <block class="brightStars">
+                <image class="pingjiaIcon" data-no="{{item}}" wx:for="{{starsBox}}" bindtap="changePic" wx:key="index" src="{{pingjiaLevel>=item? '../../icon/星级(2).png' : '../../icon/星级.png'}}"></image>
+            </block>
+        </view>
+        <view class="modal-input">
+            <input placeholder-class="input-holder" type="text" bindinput="inputpingjia" class="input" placeholder="请输入原因"></input>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+</view>

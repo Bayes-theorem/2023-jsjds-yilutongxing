@@ -1,0 +1,28 @@
+<view>
+
+    <view class="complainbox">
+        <view class='imagesize01'>
+            <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/compainarea03.png" mode="widthFix" class="in-image"></image>
+        </view>
+        <view class="button-sp-area01">
+            <button style="color:#26B99A" class="btn_complain" type="primary" plain="true" size="mini" bindtap="jumptocomplainbox">
+                意见箱
+            </button>
+        </view>
+    </view>
+    <view class="complainbox2">
+        <view class='imagesize02'>
+            <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/历史.png" mode="widthFix" class="in-image"></image>
+        </view>
+        <view class="button-sp-area02">
+            <button style="color:#26B99A" class="btn_complain" type="primary" plain="true" size="mini" bindtap="jumptocomplainlist">
+                历史投诉
+            </button>
+        </view>
+    </view>
+    <view class="textposition">
+        <text>直接联系渠道：\n\n</text>
+        <text user-select="true">{{thishosname}}：{{thishosnumber}}
+            上海市卫生热线：12320</text>
+    </view>
+</view>

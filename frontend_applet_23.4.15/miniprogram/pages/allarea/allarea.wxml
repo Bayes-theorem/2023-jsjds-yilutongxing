@@ -1,0 +1,159 @@
+<!--tabbar-->
+<view class="navbar">
+  <view class="navbar-border"></view>
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</view>
+</view>
+
+<!-- 交流区 -->
+<view hidden="{{currentTab!==0}}">
+  <view class="shang2">
+<view class="user_info2"> 
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/左上角.png" mode="heightFix" class="zuoshang"></image>
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/右下角.png" mode="heightFix" class="youxia"></image>
+  <view class="yuqingzhuanqu">讨论专区</view>
+</view> 
+</view>
+  <view class='box'>
+  <view class='box-container' wx:for="{{choice}}" wx:key="index">
+    <view class="{{index==idx?'_left':'left'}}" bindtap='goIndex' data-index="{{index}}">{{item.method}}</view>
+  </view>
+  <image src='cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/search.png' class='sousuo' catchtap="jumptosearch"></image>
+</view>
+<view bindtap="adduserpost_record" data-pid="{{item._id}}" wx:for="{{list}}" wx:key="index" class="textbox">
+  <view>
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="widthFix" catchtap="otherpage" data-uid="{{item.user_id}}"></image>
+  </view>
+ <view class="content">
+  <view class="shangbu">
+    <view class="shangyou">{{item.date}}</view>
+   </view>
+   <text>\n</text>
+   <view class="zhong">{{item.detail}}</view>
+   <view class="you3">
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/评论.png" class="pinglun" mode="heightFix"></image>
+    <view class="shu">{{item.comment}}</view>
+   </view>
+ </view>
+ 
+</view>
+<view wx:if="{{show==0}}">
+    <button class="kf_button" hover-class="plus-hover" bindtap='jumptoaddpost'>
+  <image class="kf_image" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/加.png"></image>
+</button>
+</view>
+
+<!-- 发帖弹窗 -->
+<view wx:if="{{show==1}}">
+       <view class="weui-mask" >
+       </view>
+       <view class="weui-half-screen-dialog">
+         <view class="weui-half-screen-dialog__hd">
+           <view class="weui-half-screen-dialog__hd__main">
+             <strong class="weui-half-screen-dialog__title_center">发布新帖子</strong>
+           </view>
+         </view>
+            <textarea placeholder="请输入内容" bindinput="getdetail" style="padding:15rpx 10rpx 0rpx 20rpx;border:1rpx solid rgb(228, 227, 227);border-radius: 20rpx;width: 96%;font-size: 30rpx;max-height: 320rpx;"></textarea>
+            <text style="font-size: 26rpx;margin-top: 10rpx;">平台采用全实名制，请规范用语，理性发帖！</text>
+        <button style="color:#26B99A;position: absolute;top:570rpx;width:115rpx;height:65rpx;font-size: 32rpx;left:160rpx"  type="primary" plain="true" size="mini" bindtap="quxiao" >
+       取消
+        </button>
+       <button style="color:#26B99A;position: absolute;top:570rpx;width:115rpx;height:65rpx;font-size: 32rpx;right:160rpx"  type="primary" plain="true" size="mini" bindtap="fabu">
+        发布
+        </button>
+       </view>
+     </view>
+     
+</view>
+
+<!-- 投诉区 -->
+<!-- <view hidden="{{currentTab!==1}}">
+  <view class="shang2">
+<view class="user_info2"> 
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/左上角.png" mode="heightFix" class="zuoshang"></image>
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/右下角.png" mode="heightFix" class="youxia"></image>
+  <view class="yuqingzhuanqu">投诉专区</view>
+</view> 
+</view>
+  <view class="complainbox">
+  <view class='imagesize01'>
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/compainarea03.png" mode="widthFix" class="in-image"></image>
+  </view>
+  <view class="button-sp-area01">
+    <button style="color:#26B99A" class="btn_complain" type="primary" plain="true" size="mini" bindtap="jumptocomplainbox">
+    意见箱
+    </button>
+  </view>
+</view>
+<view class="complainbox2">
+  <view class='imagesize02'>
+    <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/compainarea04.png" mode="widthFix" class="in-image"></image>
+  </view>
+  <view  class="button-sp-area02">
+    <button style="color:#26B99A" class="btn_complain" type="primary" plain="true" size="mini" bindtap="jumptoconversation">
+    人工客服
+    </button>
+  </view>
+</view>
+<view class="textposition">
+  <text>直接联系渠道：\n\n</text>
+  <text user-select="true">{{thishosname}}：{{thishosnumber}}
+    上海市卫生热线：12320</text>
+</view>
+</view> -->
+<view hidden="{{currentTab!==1}}">
+<view>
+
+<view class="complainbox">
+    <view class='imagesize01'>
+        <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/compainarea03.png" mode="widthFix" class="in-image"></image>
+    </view>
+    <view class="button-sp-area01">
+        <button style="color:#26B99A" class="btn_complain" type="primary" plain="true" size="mini" bindtap="jumptocomplainbox">
+            意见箱
+        </button>
+    </view>
+</view>
+<view class="complainbox2">
+    <view class='imagesize02'>
+        <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/历史.png" mode="widthFix" class="in-image"></image>
+    </view>
+    <view class="button-sp-area02">
+        <button style="color:#26B99A" class="btn_complain" type="primary" plain="true" size="mini" bindtap="jumptocomplainlist">
+            历史投诉
+        </button>
+    </view>
+</view>
+<view class="textposition">
+    <text>直接联系渠道：\n\n</text>
+    <text user-select="true">{{thishosname}}：{{thishosnumber}}
+        上海市卫生热线：12320</text>
+</view>
+</view>
+</view>
+
+<!-- 公示区 -->
+<view hidden="{{currentTab!==2}}">
+  <view class="shang2">
+<view class="user_info2"> 
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/左上角.png" mode="heightFix" class="zuoshang"></image>
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/右下角.png" mode="heightFix" class="youxia"></image>
+  <view class="yuqingzhuanqu">公示专区</view>
+</view> 
+</view >
+<view style="margin-top:40rpx;">
+    <navigator
+wx:for="{{annlist}}"
+wx:key="index"
+class="box2"
+bindtap="adduserannouncement_record" data-pid="{{item._id}}"
+url="/pages/useroneannouncement/useroneannouncement?announcement_id={{item._id}}" >
+  <view class="shangbu">
+  <image class="zuo2" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/new_icon/信息公示.png" mode="heightFix"></image> 
+  <view class="you2">{{item.date}}</view> 
+  </view>
+  <view class="zhong2">{{item.title}}</view>
+  <view class="xiangqing">>></view>
+</navigator>
+</view>
+
+</view>

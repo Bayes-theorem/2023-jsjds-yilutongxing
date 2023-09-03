@@ -1,0 +1,43 @@
+<!--pages/message/message.wxml-->
+<!--tabbar-->
+<view class="navbar">
+  <text wx:for="{{monnavbar}}" data-idx="{{index}}" class="item {{moncurrentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="monnavbarTap">{{item}}</text>
+</view>
+<!-- 会话消息 -->
+<view hidden="{{moncurrentTab!==1}}">
+  <view  class="container1">
+ <view   class="container1">
+   <view class="conversation-list-area">
+     <scroll-view class="scoll-view" scroll-y="true">
+       <TUI-conversation-item class="kf_button" hover-class="plus-hover"  wx:for="{{conversationList}}" wx:key="index" id="{{item.conversationID}}" data-type="{{item.type}}" conversation="{{item}}" bindtap="handleRoute" bind:transCheckID="transCheckID" charge="{{transChenckID===item.conversationID}}"></TUI-conversation-item>
+     </scroll-view>
+   </view>
+ </view>
+
+</view>
+
+  <image class="kf_image" bindtap="handleOnTap" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/new_加.png"></image>
+
+</view>
+
+<!-- 系统消息 -->
+<view hidden="{{moncurrentTab!==0}}">
+  <view wx:for="{{commentlist}}" wx:key="index"
+class="textbox" bindtap="updatecomment" data-comid="{{item._id}}" data-postid="{{item.post_id}}">
+<view wx:if="{{!item.read}}">
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/新消息红点.png" class="hongdian"></image>
+</view>
+    <image class="user" mode="left" src="{{item.user_profile}}" 
+    mode="heightFix"></image>
+    <view class="num">
+    {{item.date}}
+    </view>
+    <view class="content">
+      <text style="margin-top:15rpx;">{{item.content}}</text>
+    </view>
+    
+</view>
+</view>
+
+
+

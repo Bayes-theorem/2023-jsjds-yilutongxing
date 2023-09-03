@@ -1,0 +1,7 @@
+
+<view class="box1"wx:if="{{canIUseGetUserProfile}}" bindtap="jumptouserlogin">
+<image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/登录患者.png" class="image1" mode="widthFix"></image>
+<view class="text">患者</view>
+</view>
+
+    

@@ -1,0 +1,7 @@
+/* pages/zhinan/zhinan.wxss */
+.image{
+  width:740rpx;
+  height:1300rpx;
+  background-color: white;
+  z-index: 99;
+}

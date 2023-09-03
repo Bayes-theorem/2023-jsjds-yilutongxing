@@ -1,0 +1,73 @@
+
+  .notactive{
+      background: white;
+  }
+  .leibie{
+      margin:17rpx 0rpx 2rpx 0rpx;
+      font-size: 28rpx;
+      color: black;
+  }
+  .label_view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rpx 10rpx;
+    width: 135rpx;
+    height: 60rpx;
+    border: 1rpx solid rgb(114, 107, 107);
+    font-size: 24rpx;
+    border-radius: 12rpx;
+    color: rgb(114, 107, 107);
+    margin-right: 10rpx;
+    margin-top: 20rpx;
+}
+
+.btn_view {
+    padding:40rpx 10rpx 5rpx 25rpx;
+    margin-top: auto;
+    margin-right: auto;
+    font-size: 26rpx;
+    color: rgb(99, 95, 95);
+    width: 700rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.input{
+    padding:0rpx 25rpx 0rpx 25rpx;
+}
+.btn_view text {
+    display: flex;
+    align-items: center;
+}
+
+.active {
+    background: #43d66c;
+    border: 1rpx solid rgb(255, 253, 253);
+}
+
+add-wrap {
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.quxiao{
+    width: 42%;
+    float: left;
+    margin-top: 25rpx;
+    margin-left: 190rpx;
+}
+.fabu{
+    width: 42%;
+    float: right;
+    margin-top: 25rpx;
+    margin-right: 190rpx;
+}
+
+.textbox {
+    margin: 10rpx;
+    padding: 20rpx;
+    color: darkgray;
+}

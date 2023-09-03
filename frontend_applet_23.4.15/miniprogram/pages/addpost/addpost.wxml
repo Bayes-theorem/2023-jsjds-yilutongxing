@@ -1,0 +1,21 @@
+
+<view class='btn_view'>
+    <text class="leibie">类别：</text>
+    <block wx:for="{{obtnArry}}" wx:key="index">
+      <view class='label_view {{item.selected ? "active" : "notactive"}}' data-value="{{item.name}}" bindtap='dealTap' checked="{{item.selected}}" data-index="{{index}}">
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+  <text>\n</text>
+<input placeholder="请输入标题" bindinput="gettitle" class="input"></input>
+<text>\n</text>
+<text>\n</text>
+<textarea placeholder="请输入内容" bindinput="getdetail" class="input"></textarea>
+<view class="textbox">
+<text>平台采用全实名制，请规范用语，理性发帖！</text>
+</view>
+<view class="add-wrap" hover-class="plus-hover">
+  <button class="quxiao" size="mini" type="default" bindtap="back">取消</button>
+  <button class="fabu" size="mini" type="primary" bindtap="addpost_record">发布</button>
+</view>

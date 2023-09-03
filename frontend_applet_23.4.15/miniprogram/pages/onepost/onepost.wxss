@@ -1,0 +1,139 @@
+page{
+  background-color: #F7F7F7;
+}
+.box{
+  padding:40rpx;
+  background-color: white;
+  flex-flow: row;
+}
+.profile{
+  height:80rpx;
+  z-index: 99999;
+  border-radius: 50%;
+
+}
+.shangbu{
+  display:flex;
+}
+.biaoqianimage{
+  width:45rpx;
+  height: 45rpx;
+  position: absolute;
+  right:123rpx;
+}
+.biaoqian{
+  position: absolute;
+  right:60rpx;
+}
+.title{
+  font-size: 36rpx;
+  margin:20rpx 10rpx 6rpx 20rpx;
+}
+.detail{
+  font-size: 31rpx;
+  margin-top:22rpx;
+  text-indent: 2em
+}
+.xiabu{
+  display:flex;
+}
+.date{
+  font-size:26rpx;
+  margin: 20rpx 0rpx 0rpx 0;
+}
+.textbox{
+  padding:10rpx 0rpx 10rpx 30rpx;
+  background-color: white;
+  flex-flow: row;
+  display: flex;
+  position: relative;
+  text-align: center;
+  border-bottom: 1rpx solid;
+  border-bottom-color: #f1ecec;
+}
+.tool{
+position:absolute;
+right:34rpx;
+margin: 20rpx 0rpx 25rpx 0;
+}
+.tool-item{
+display: inline-block;
+vertical-align: top;
+margin-right: 20rpx;
+}
+.tool-item image{
+height: 38rpx;
+width: 38rpx;
+vertical-align: -3px;
+margin-right: 10rpx;
+}
+.comment image{
+transform: scale(.85);
+}
+.text{
+  font-size:28rpx;
+}
+.popup{
+  display: flex;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  align-items: center;
+  background:rgb(242, 242, 242,1);
+}
+.input{
+  width: 65%;
+  height: 65rpx; 
+  display:block; 
+  margin: 30rpx auto;
+  background: #fff;
+}
+.placeholderStyle{
+  font-size: 26rpx;
+  margin: 0 20rpx;
+}
+.button{
+  height: 65rpx;
+  width: 20%;
+  line-height:65rpx;
+  text-align: center;
+  align-items: center;
+  font-size: 30rpx;
+  box-shadow: 8rpx;
+  color:#979797;
+  border-radius: 30rpx;
+  background: linear-gradient(#a0b8a2,#26B99A);
+}
+.user{
+  margin: 10rpx 5rpx;
+  height: 70rpx;
+  width: 70rpx;
+  width: 20%;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+}
+.content {
+    text-align: center;
+    font-size: 30rpx;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    width: 80%;
+  }
+  
+  .num {
+    font-size: 22rpx;
+    position: absolute;
+    right:20rpx;
+    display: flex;
+  }
+.pinglun{
+    background-color: white;
+    font-size:33rpx;
+    color:#26b99a;
+    font-weight: 550;
+    padding:0 0 10rpx 34rpx;
+    border-bottom: 1rpx solid #cecaca;
+}

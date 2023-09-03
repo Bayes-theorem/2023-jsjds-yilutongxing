@@ -1,0 +1,44 @@
+<view wx:for="{{list}}" wx:key="index" class="box">
+<view class="shangbu">
+    <image src="{{item.user_profile}}" mode="heightFix" class="profile"></image>
+    <view class="title">{{item.user_name}}</view>
+    <!-- <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/标签.png" mode="heightFix" class="biaoqianimage"></image>
+    <view class="biaoqian">{{item.category}}</view> -->
+</view>
+    <view class="detail">{{item.detail}}</view>
+    <view class="xiabu">
+    <view class="date">{{item.date}}</view>
+        <view class="tool" wx:for="{{status}}" wx:key="index" wx:for-item="status">
+        <view class="tool-item" catchtap='onUpTop'>
+            <image wx:if="{{status.agree}}" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost02.png"></image>
+            <image wx:else src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost01.png"></image>
+            <text class="text">{{item.agree}}</text>
+        </view>
+        <view class="tool-item" catchtap='onCollectionTap'>
+            <image wx:if="{{status.collect}}" src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost04.png"></image>
+            <image wx:else src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/收藏.png"></image>
+            <text class="text">{{item.collect}}</text>
+        </view>
+        <view class="tool-item comment" bindtap="Onclose" catchtap='onCommentTap'>
+            <image src="cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/onepost05.png"></image>
+            <text class="text">{{item.comment}}</text>
+        </view>
+    </view>
+    </view>
+</view>
+<view class="pinglun">
+    评论
+</view>
+<view wx:for="{{comment}}" wx:key="index" class="textbox">
+    <image class="user" mode="left" src="{{item.user_profile}}" mode="heightFix"></image>
+    <view class="content">
+      <text style="margin-top:15rpx;">{{item.content}}</text>
+    </view>
+    <view class="num">
+    {{item.date}}
+    </view>
+</view>
+<view class='popup' hidden="{{show}}">
+    <input class='input' bindinput="getnewcomment" placeholder-class="placeholderStyle" placeholder='想说的话......'></input>
+    <button class='button' size="mini" type="primary" bindtap="addcomment_record">发送</button>
+</view>

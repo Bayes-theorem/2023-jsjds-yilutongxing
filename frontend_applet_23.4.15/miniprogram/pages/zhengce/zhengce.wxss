@@ -1,0 +1,20 @@
+/* pages/zhengce/zhengce.wxss */
+.container{
+  margin:40rpx 30rpx 40rpx 30rpx;
+  display: flex;
+}
+.biaoti{
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.zhengwenbiaoti{
+  text-align: left;
+  margin:10rpx 0rpx 10rpx 0rpx;
+}
+.you{
+  align-items: right;
+  font-size: 26rpx; 
+  position: absolute; 
+  right:10px;
+  top:100rpx
+}

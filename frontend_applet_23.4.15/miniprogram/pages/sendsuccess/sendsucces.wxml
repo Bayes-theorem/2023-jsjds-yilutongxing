@@ -1,0 +1,12 @@
+<view class='setting box01'>
+<image class='btnImg' src='cloud://cloud-2023-jisai-7ft7ahc87f5c949.636c-cloud-2023-jisai-7ft7ahc87f5c949-1309283578/icon/sendsuccess01.png' style="width:50rpx;height:50rpx;"></image>
+<text style="font-size:1.1em;">您的信件已成功投递到意见箱！</text>
+</view>
+<view class="button-sp-area">
+    <button type="primary" plain="true" size="mini" bindtap="jumptocomplainarea">
+    返回
+    </button>
+</view>
+<view class="box02">感谢您的来信，我院将尽快给您答复</view>
+
+
